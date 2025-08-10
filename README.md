@@ -29,3 +29,39 @@ x-rapidapi-key: YOUR_API_KEY
   "page": 1
 }
 ```
+
+## Example Response
+
+{
+"page": 2,
+"results": [
+{
+"id": "tt1234567",
+"title": "Action Movie",
+"year": 2023,
+"genre": ["Action", "Adventure"],
+"rating": 7.8
+}
+]
+}
+
+## Authentication
+
+To authenticate your requests, include the x-api-key header with your API key in each request. The API key is provided upon subscription to the MoviesDatabase API on RapidAPI.
+
+## Error Handling
+
+401 Unauthorized: Ensure that your x-api-key is included and valid.
+
+404 Not Found: Verify that the requested resource exists.
+
+429 Too Many Requests: Implement rate limiting in your application to avoid exceeding the API's usage limits.
+
+Usage Limits and Best Practices
+Rate Limit: The API has a rate limit of 1000 requests per hour.
+
+Pagination: Use the page query parameter to paginate through large datasets.
+
+Caching: Implement caching mechanisms to reduce the number of API calls and improve performance.
+
+Secure API Key: Never expose your API key in client-side code; use server-side requests to keep your key safe.
